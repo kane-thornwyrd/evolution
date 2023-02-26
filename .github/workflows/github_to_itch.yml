@@ -50,13 +50,13 @@ jobs:
   
   - name: Export Linux/X11
     run: |
-     mkdir -p ./dist/linux
-     ./godot --headless --path ./ --export-release "Linux/X11 - x86_64" ./dist/linux/Évolution.x86_64
+     mkdir -p ./exports
+     ./godot --headless --path ./ --export-release "Linux/X11 - x86_64" ./exports/Évolution.x86_64
     
   - name: Export Web
     run: |
-     mkdir -p ./dist/web
-     ./godot --headless --path ./ --export-release "Web" ./dist/web/index.html
+     mkdir -p ./exports
+     ./godot --headless --path ./ --export-release "Web" ./exports/index.html
     
 
   - uses: actions/upload-artifact@v2
