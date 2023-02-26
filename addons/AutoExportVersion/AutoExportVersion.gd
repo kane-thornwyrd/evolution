@@ -12,11 +12,13 @@ extends EditorPlugin
 ## Several utility methods are provided for the most common use cases. You can simply uncomment one
 ## of the lines in this method or combine them in any way.
 func get_version(features: PackedStringArray, is_debug: bool, path: String, flags: int) -> String:
-	var version: String = ""
+	var version: String = "0.0.1"
 	
 #	version += get_git_commit_count()
 	version += get_export_preset_version()
+	version += '-'
 	version += get_git_branch_name()
+	version += '-'
 	version += get_git_commit_hash()
 #	version += get_export_preset_android_version_code() + " " + get_export_preset_android_version_name()
 	
